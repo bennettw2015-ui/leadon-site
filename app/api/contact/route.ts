@@ -16,6 +16,13 @@ export async function POST(request: Request) {
       );
     }
 
+    if (!process.env.RESEND_API_KEY) {
+      return NextResponse.json(
+        { error: "RESEND_API_KEY is not set." },
+        { status: 500 }
+      );
+    }
+
     const toEmail = process.env.CONTACT_TO_EMAIL;
 
     if (!toEmail) {
@@ -25,11 +32,15 @@ export async function POST(request: Request) {
       );
     }
 
+    const contactIsEmail =
+      typeof contact === "string" &&
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact);
+
     const { data, error } = await resend.emails.send({
       from: "LeadOn <onboarding@resend.dev>",
       to: [toEmail],
       subject: `New LeadOn site review request from ${name}`,
-      replyTo: contact,
+      replyTo: contactIsEmail ? contact : undefined,
       text: `
 New LeadOn contact form submission
 
