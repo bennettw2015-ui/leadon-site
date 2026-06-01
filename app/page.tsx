@@ -296,15 +296,21 @@ function HeroCopy() {
       </p>
 
       <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-        <button className="pointer-events-auto group rounded-xl bg-white px-5 py-3.5 text-sm font-semibold text-black shadow-[0_14px_45px_rgba(255,255,255,0.07)] transition-[background-color,box-shadow] duration-300 ease-out hover:bg-sky-50 hover:shadow-[0_16px_55px_rgba(125,211,252,0.16)]">
+        <a
+          href="#contact"
+          className="pointer-events-auto group rounded-xl bg-white px-5 py-3.5 text-sm font-semibold text-black shadow-[0_14px_45px_rgba(255,255,255,0.07)] transition-[background-color,box-shadow] duration-300 ease-out hover:bg-sky-50 hover:shadow-[0_16px_55px_rgba(125,211,252,0.16)]"
+        >
           Book free review
           <ArrowRight className="ml-2 inline h-4 w-4 transition-transform duration-300 ease-out group-hover:translate-x-0.5" />
-        </button>
+        </a>
 
-        <button className="pointer-events-auto group rounded-xl border border-white/[0.08] bg-white/[0.025] px-5 py-3.5 text-sm font-semibold text-white/58 transition-[background-color,border-color,color] duration-300 ease-out hover:border-sky-300/25 hover:bg-sky-400/[0.06] hover:text-sky-100">
-          See the system
+        <a
+          href="#process"
+          className="pointer-events-auto group rounded-xl border border-white/[0.08] bg-white/[0.025] px-5 py-3.5 text-sm font-semibold text-white/58 transition-[background-color,border-color,color] duration-300 ease-out hover:border-sky-300/25 hover:bg-sky-400/[0.06] hover:text-sky-100"
+        >
+          See the process
           <ArrowRight className="ml-2 inline h-4 w-4 opacity-0 transition-[opacity,transform] duration-300 ease-out group-hover:translate-x-0.5 group-hover:opacity-100" />
-        </button>
+        </a>
       </div>
 
       <div className="mt-10 flex flex-wrap gap-4">
