@@ -13,9 +13,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "LeadPilot | Lead systems for trades",
+  title: "LeadOn | Lead systems for trades",
   description:
-    "Premium websites, quote tools, and lead systems for trades businesses.",
+    "Premium websites, quote tools, and lead systems for trades and service businesses.",
 };
 
 export default function RootLayout({
